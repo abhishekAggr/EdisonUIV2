@@ -1,0 +1,77 @@
+[{
+    "credit": {
+        "0": {
+            "label":"Credit Limit",
+            "label_class":"col-lg-3 col-md-3 col-sm-3 m--font-thin m--padding-5",
+            "value_class": "m--font-danger m--font-bolder m--icon-font-size-lg2 m--padding-5",
+            "value": "€ 35.000"
+        },
+        "1": {
+            "label":"Average Value",
+            "label_class":"col-lg-3 col-md-3 col-sm-3 m--font-thin m--padding-5",
+            "value_class": "m--font-warning m--font-bolder m--icon-font-size-lg2",
+            "value": "€ 5665"
+        },
+        "2": {
+            "label":"Orders",
+            "label_class":"col-lg-2 col-md-2 col-sm-2 m--font-thin m--padding-5",
+            "value_class": "m--font-darkblue m--font-bolder m--icon-font-size-lg2",
+            "value": "182"
+        },
+        "3": {
+            "label":"Last order",
+            "label_class":"col-lg-4 col-md-4 col-sm-4 m--font-thin m--padding-5",
+            "value_class": "m--font-darkblue m--font-bolder m--icon-font-size-lg2",
+            "value": "30-12-2017"
+        },
+        "4": {
+            "label":"Credit Rating",
+            "label_class":"col-lg-3 col-md-3 col-sm-3 m--font-thin m--padding-5",
+            "value_class": "col-lg-3 col-md-3 col-sm-3 m--font-bolder",
+            "value": "CC"
+        },
+        "5": {
+            "label":"Payment Condition",
+            "label_class":"col-lg-2 col-md-2 col-sm-2 m--font-thin m--padding-5",
+            "value_class": "col-lg-4 col-md-4 col-sm-4 m--font-bolder",
+            "value": "On credit, 60 days"
+        },
+        "6": {
+            "label":"Status",
+            "label_class":"col-lg-3 col-md-3 col-sm-3 m--font-thin m--padding-5",
+            "value_class": "col-lg-3 col-md-3 col-sm-3 m--font-bolder",
+            "value": "Not Blocked"
+        },
+        "7": {
+            "label":"Credit Check",
+            "label_class":"col-lg-2 col-md-2 col-sm-2 m--font-thin m--padding-5",
+            "value_class": "col-lg-4 col-md-4 col-sm-4 m--font-bolder",
+            "value": "Checked"
+        }
+    },
+    "approval": {
+        "Customer": "United Stereo",
+        "Applicant": "Automatic Process",
+        "Request Date": "19-Jun-2018",
+        "Reason for Change": "Automatic credit limit change request. Minimal needed limit is 45100.00 Suggested limit is 50000.00. Current Limit is 35000",
+        "Credit Limit EUR": "50000",
+        "Remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed."
+    },
+
+    "customer": {
+        "Customer": "Record Town dd",
+        "Customer Number": "6938371",
+        "VAT Nr.": "40309922903941",
+        "Credit Rating": "CC",
+        "Address": " Frankfurter Allee 85 76137 Karlsruhe Südstadt",
+        "Payment Condition": " On credit, 60 days",
+        "Contact person": "Eldora J. Lay",
+        "Customer Since": "28-07-1997",
+        "Email": "Eldora J. Lays@unistereo.com",
+        "Credit Classification": "None",
+        "Telephone": "+49(0)721 12 64 88",
+        "Current Credit Limit": "35000",
+        "Invoice To": "Sales@unistereo.com "
+    },
+    "status": "2"
+}]

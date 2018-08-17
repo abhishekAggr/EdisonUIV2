@@ -1,0 +1,83 @@
+[
+    {
+        "RecordID": 1,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "23456",
+        "Customer": "Eldora J. Lay - University Stereo",
+        "Approval": "1",
+        "TurnOver": 1,
+        "Status": 1
+    },
+    {
+        "RecordID": 2,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "23678",
+        "Customer": "Marion M. Phipps - County Seat",
+        "Approval": 1,
+        "TurnOver": 2,
+        "Status": 2
+    },
+    {
+        "RecordID": 3,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "24567",
+        "Customer": "John E. Sanders - Terra",
+        "Approval": 2,
+        "TurnOver": 3,
+        "Status": 3
+    },
+    {
+        "RecordID": 4,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "24778",
+        "Customer": "Darcy Guzman - Record Town",
+        "Approval": 3,
+        "TurnOver": 3,
+        "Status": 2
+    },
+    {
+        "RecordID": 5,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "36778",
+        "Customer": "Richard Joyner - First Choice Yard Help",
+        "Approval": 4,
+        "TurnOver": 2,
+        "Status": 2
+    },
+    {
+        "RecordID": 6,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "36788",
+        "Customer": "William A. Griswold - Millenia Life",
+        "Approval": "Discount",
+        "TurnOver": 2,
+        "Status": 2
+    },
+    {
+        "RecordID": 7,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "36789",
+        "Customer": "Carlos C. Garcia - Colonial Stores",
+        "Approval": 4,
+        "TurnOver": 2,
+        "Status": 2
+    },
+    {
+        "RecordID": 8,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "36987",
+        "Customer": "Cheryl de Bruijne - Custom Sound",
+        "Approval": 4,
+        "TurnOver": 3,
+        "Status": 2
+    },
+    {
+        "RecordID": 9,
+        "RequestDate": "22\/7\/2017",
+        "CustomerID": "36987",
+        "Customer": "Cheryl de Bruijne - Custom Sound",
+        "Approval": 4,
+        "TurnOver": 3,
+        "Status": 2
+    }
+]

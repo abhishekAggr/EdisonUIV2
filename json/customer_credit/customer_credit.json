@@ -1,0 +1,16 @@
+[{
+    "pageID": 2,
+    "pageTitle": "Customer Credit",
+    "breadCrums": {
+        "0": {"title":"Sales", "link":"#","saperator":"1"},
+        "1": {"title":"Approval", "link":"approvaloverview.html","saperator":"1"},
+        "2": {"title":"Customer Credit", "link":"#","saperator":"0"}
+    },
+    "buttons":{
+        "0":{"class":"btn-outline-info m--margin-right-5 accept","icon":"la la-check","text":"Approve","text_class":"m--icon-font-size-sm5"},
+        "1":{"class":"m--margin-right-5 hold","icon":"la la-exclamation-triangle","text":"Hold","text_class":"m--icon-font-size-sm5"},
+        "2":{"class":"btn-outline-danger m--margin-right-5 reject","icon":"la la-remove","text":"Reject","text_class":"m--icon-font-size-sm5"}
+    }
+   
+
+}]

@@ -1,0 +1,109 @@
+[
+    {
+        "value": "Dashboard",
+        "id": "1",
+        "icon":"flaticon-squares-1",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    }, 
+    {
+        "value": "Sales",
+        "id": "2",
+        "icon":"fa fa-handshake",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    },
+    {
+        "value": "Customer",
+        "id": "3",
+        "icon":"",
+        "url":"#",
+        "class":"",
+        "parentid": "2"
+    },
+    
+    {
+        "value": "Pricing",
+        "id": "4",
+        "icon":"",
+        "url":"#",
+        "class":"",
+        "parentid": "2"
+    },
+    {
+        "value": "Assortment",
+        "id": "5",
+        "icon":"",
+        "url":"#",
+        "class":"",
+        "parentid": "2"
+    },
+    {
+        "value": "Approvals",
+        "id": "6",
+        "icon":"",
+        "url":"approvaloverview.html",
+        "class":"",
+        "parentid": "2"
+    },
+    {
+        "value": "Purchase",
+        "id": "7",
+        "icon":"flaticon-diagram",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    },
+    {
+        "value": "Inventory",
+        "id": "8",
+        "icon":"flaticon-file",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    },
+    {
+        "value": "Fincance",
+        "id": "9",
+        "icon":"flaticon-analytics",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    },
+    {
+        "value": "WareHouse",
+        "id": "10",
+        "icon":"fa fa-warehouse",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    },
+    {
+        "value": "Administration",
+        "id": "11",
+        "icon":"flaticon-user",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    },
+    {
+        "value": "System",
+        "id": "12",
+        "icon":"flaticon-laptop",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    },
+    {
+        "value": "Settings",
+        "id": "13",
+        "icon":"flaticon-settings",
+        "url":"#",
+        "class":"",
+        "parentid": "-1"
+    }
+   
+]
+    

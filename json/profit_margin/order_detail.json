@@ -1,0 +1,85 @@
+[
+
+    {
+        "PageID": 1,
+        "PageTitle": "Profit Margin",
+        "BreadCrums": {
+            "0": {
+                "title": "Sales",
+                "link": "#",
+                "saperator": "1"
+            },
+            "1": {
+                "title": "Approval",
+                "link": "approvaloverview.html",
+                "saperator": "1"
+            },
+            "2": {
+                "title": "Profit Margin",
+                "link": "#",
+                "saperator": "0"
+            }
+        },
+        "order_overview": {
+            "Total Lines": "10",
+            "Contribution": "€ 80.24",
+            "Netto Contribution": "€ 76.83",
+            "status": 1
+        },
+        "order_details": {
+            "Nedis Margin": "52.53%",
+            "Std Margin": "57.43%",
+            "Transport Costs": "€ 3.41",
+            "Order Amount": "€ 143.89",
+            "Standard OrderAmount": "€ 155.50",
+            "Total Amount": "€ 144.41"
+        },
+        "price_margin": {
+            "Standard Price": "",
+            "Price": "",
+            "Difference": ""
+        },
+        "customer": {
+            "Customer": "Record Town",
+            "Customer Number": "6938371",
+            "VAT Nr.": "40309922903941",
+            "Credit Rating": "CC",
+            "Address": " Frankfurter Allee 85 76137 Karlsruhe Südstadt",
+            "Payment Condition": " On credit, 60 days",
+            "Contact person": "Eldora J. Lay",
+            "Customer Since": "28-07-1997",
+            "Email": "Eldora J. Lays@unistereo.com",
+            "Credit Classification": "None",
+            "Telephone": "+49(0)721 12 64 88",
+            "Current Credit Limit": "35000",
+            "Invoice To": "Sales@unistereo.com "
+        },
+        "status": "1",
+        "buttons": {
+            "0": {
+                "class": "btn-outline-info m--margin-right-5 accept",
+                "icon": "la la-check",
+                "text": "Approve",
+                "text_class": "m--icon-font-size-sm5",
+                "modal": "#accept_modal",
+                "callback": "accept()"
+            },
+            "1": {
+                "class": "m--margin-right-5 hold",
+                "icon": "la la-exclamation-triangle",
+                "text": "Hold",
+                "text_class": "m--icon-font-size-sm5",
+                "modal": "#hold_modal",
+                "callback": "hold()"
+            },
+            "2": {
+                "class": "btn-outline-danger m--margin-right-5 reject",
+                "icon": "la la-remove",
+                "text": "Reject",
+                "text_class": "m--icon-font-size-sm5",
+                "modal": "#reject_modal",
+                "callback": "reject()"
+            }
+        }
+    }
+]
