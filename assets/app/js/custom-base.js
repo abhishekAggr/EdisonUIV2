@@ -1,10 +1,7 @@
 $(function () {
-    //  mApp.blockPage();
-    //mApp.unblockPage();
-    $("#m_header").load("theme/header.html");
-    $("#footer").load("theme/footer.html");
 
-   
+    $("#m_header").load("theme/header.html");
+    $("#footer").load("theme/footer.html"); 
 
     var menuSetup = function () {
 
