@@ -4,10 +4,7 @@ $(function () {
     $("#m_header").load("theme/header.html");
     $("#footer").load("theme/footer.html");
 
-    $(".menu-search").on('click', function (e) {
-        alert("menu-search");
-        loadHTMLPage(e,$(this));
-    });
+   
 
     var menuSetup = function () {
 
@@ -70,7 +67,7 @@ $(function () {
     }
 
     var renderBreadcrumbs = function (data) {
-
+        $("#breadcrumb").html('');
         $.each(data, function (key, value) {
             $("#breadcrumb").append(`
 			<li class="m-nav__item">
@@ -136,10 +133,7 @@ $(function () {
         $(".m-menu__link").on('click', function (e) {
             loadHTMLPage(e,$(this));
         });
-        $(".menu-search").on('click', function (e) {
-            alert("menu-search");
-            loadHTMLPage(e,$(this));
-        });
+      
     }
 
     menuSetup();
@@ -185,35 +179,18 @@ function menusSearch() {
         source: t,
         templates: {
             empty: ['<div class="empty-message" style="padding: 10px 15px; text-align: center;">', "unable to find any, that match the current query", "</div>"].join("\n"),
-            suggestion: Handlebars.compile("<div class='dddd'><strong>{{value}} - {{url}}</strong> </div>")
+            suggestion: Handlebars.compile("<div ><strong>{{value}}</strong> </div>")
         }
         
-    //     ,
-        
-    // callback: {
-    //     onNavigateBefore: function (e) {
-           
-    //         alert( 'Clicked!');
-    //     },
-    //     onClickBefore : function(e){
-            
-    //         alert("Sssssssssss");
-    //     },
-    //     onClickAfter : function(node, a, item, even){
-            
-    //         alert("Sssssssssss");
-    //     }
-    // }
-    }),
-    $(".dddd").on('click', function (e) {
-        alert("menu-search");
-        //loadHTMLPage(e,$(this));
-    });
+   
+    })
 }
 
 function loadHTMLPage(e,obj){
+
         e.preventDefault();
         if (obj.attr('href') != "" && (obj.attr('href') != '#')) {
+            $("#page").html('')
             $("#page").load(obj.attr('href'));
         }
         return false;
@@ -289,7 +266,3 @@ function renderPortler(divID, strFun, reload, collapse) {
 
 }
 
-$(".menu-search").on('click', function (e) {
-    alert("menu-search1");
-    loadHTMLPage(e,$(this));
-});

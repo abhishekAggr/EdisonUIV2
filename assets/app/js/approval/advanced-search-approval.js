@@ -26,7 +26,7 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 
 	*/
 	var renderTopTabs = function (data) {
-		
+		$("#approval-top-tab").html("");
 		$.each(data, function (key, value) {
 
 			$("#approval-top-tab").append(`
@@ -82,7 +82,7 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 			processing: !0,
 			serverSide: !0,
 			ajax: {
-				async: true,
+				async: false,
 				url: 'inc/api/datatables/demos/approval.php', //Calling this file for server side search
 				//url:'json/approval/approvals_list.json',
 				type: 'POST',

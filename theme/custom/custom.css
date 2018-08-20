@@ -1,0 +1,23 @@
+.nedis-blue{
+background-color: #1D3374!important ;
+color: #d9d8e8 ;
+}
+.nedis-blue a:active,.nedis-blue a:hover{
+    background-color:  #f2f5f8 ;
+    color: #1D3374 ;
+}
+
+.m-topbar .m-topbar__nav.m-nav>.m-nav__item>.m-nav__link .m-nav__link-icon>i:before {
+    /* background: #eee; */
+    background: #A8A8A7;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tt-menu {
+    width: 100%;
+    background: #f2f5f8;
+    color: #1D3374 ;
+    padding: 5px;
+}
