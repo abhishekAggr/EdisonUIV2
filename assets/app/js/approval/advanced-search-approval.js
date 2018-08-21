@@ -82,7 +82,7 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 			processing: !0,
 			serverSide: !0,
 			ajax: {
-				async: false,
+				async: true,
 				url: 'inc/api/datatables/demos/approval.php', //Calling this file for server side search
 				//url:'json/approval/approvals_list.json',
 				type: 'POST',
