@@ -137,7 +137,6 @@ $(function () {
     menusSearch();
   
     $(".menu-search").on('click', function (e) {
-        alert("menu-searchW3");
         loadHTMLPage(e,$(this));
     });
  

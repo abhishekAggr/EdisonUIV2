@@ -11,7 +11,6 @@ var PortletTools = function () {
 				renderPageTitle(data[0].PageTitle);
 				renderBreadcrumbs(data[0].BreadCrums);
 				$(".breadcrumbs").on('click',function(e){
-					alert("ddddd");
 					loadHTMLPage(e,$(this));
 					// e.preventDefault();
 					// if($(this).attr('href')!="" && ($(this).attr('href')!='#')){
