@@ -59,6 +59,7 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 
 
 	var approvalDataTable = function () {
+		
 		// begin first table
 		var t = $('#m_table_1').DataTable({
 			responsive: true,
