@@ -177,7 +177,6 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 
 							e = $('<select class=" inline-search form-control form-control-sm form-filter m-input" title="Select" data-col-index="' + this.index() + '">\n\t\t\t\t\t\t\t\t\t\t<option value="">Select</option></select>'), this.data().unique().sort().each(function (t, a) {
 								$(e).append(`<option value="${t}">${approval[t].title}</option"`);
-								$('.m-input[data-col-index="4"]').append('<option value="' + t + '">' + approval[t].title + '</option>');
 							});
 							break;
 
@@ -196,9 +195,6 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 									'class': ' m-badge--primary'
 								}
 							};
-							column.data().unique().sort().each(function (d, j) {
-								$('.m-input[data-col-index="5"]').append('<option value="' + d + '">' + status[d].title + '</option>');
-							});
 							e = $('<select class="form-control form-control-sm form-filter m-input" title="Select" data-col-index="' + this.index() + '">\n\t\t\t\t\t\t\t\t\t\t<option value="">Select</option></select>'), this.data().unique().sort().each(function (t, a) {
 								$(e).append('<option value="' + t + '">' + status[t].title + "</option>")
 							});
