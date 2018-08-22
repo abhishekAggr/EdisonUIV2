@@ -8,44 +8,36 @@
     "TopTabs": {
         "0": {
             "title": "Pending",
-            "id":"pending-tab",
             "Icon": "far fa-clock",
             "color":"brand",
             "Count": "2",
-            "Details": "All Pending Approvals",
-            "Type": "Status",
-            "typeVal": "1"
+            "description": "All Pending Approvals",
+            "link":"#"
         },
        
         "1": {
             "title": "Customer Credit",
-            "id":"customer-credit",
             "Icon": "fas fa-dollar-sign",
             "color":"info",
             "Count": "6",
-            "Details": "All Customer Credit Approvals",
-            "Type": "Approval",
-            "typeVal": "2"
+            "description": "All Customer Credit Approvals",
+            "link":"customercredit.html"
         },
         "2": {
             "title": "Profit Margin",
-            "id":"profit-margin",
             "Icon": "fa fa-percent",
             "Count": "2",
             "color":"danger",
-            "Details": "All Profit Margin Approvals",
-            "Type": "Approval",
-            "typeVal": "1"
+            "description": "All Profit Margin Approvals",
+            "link":"profitmargin.html"
         },
         "3": {
             "title": "Customer Data",
-            "id":"customer-data",
             "Icon": "fas fa-user",
             "color":"success",
             "Count": "2",
-            "Details": "All Customer Data Approvals",
-            "Type": "Approval",
-            "typeVal": "3"
+            "description": "All Customer Data Approvals",
+            "link":"#"
         }
 
     }

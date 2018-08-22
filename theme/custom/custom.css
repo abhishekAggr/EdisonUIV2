@@ -17,7 +17,35 @@ color: #d9d8e8 ;
 }
 .tt-menu {
     width: 100%;
-    background: #f2f5f8;
+    background: #d9d8e8;
     color: #1D3374 ;
     padding: 5px;
+}
+.m-portlet .m-portlet__head{
+    height: 3.1rem;
+}
+.m-portlet .m-portlet__body {
+    padding: 0 2.2rem;
+}
+.dataTables_paginate{
+    float: left;
+}
+.twitter-typeahead{
+    width:100%;
+}
+.tt-dataset.tt-dataset-best-pictures div {
+    padding: 5px;
+    width: 100%;
+}
+a.top-tabs:hover {
+    text-decoration: none;
+}
+.tt-input{
+    position: relative;
+    vertical-align: top;
+    background-color: #1D3374!important;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #d9d8e8;
+    color: #d9d8e8;
 }

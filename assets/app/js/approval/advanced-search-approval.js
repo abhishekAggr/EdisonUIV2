@@ -30,54 +30,56 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 		$.each(data, function (key, value) {
 
 			$("#approval-top-tab").append(`
+			
 			<div class="col-md-12 col-lg-6 col-xl-3">
 
                                     <!--begin::Total Profit-->
                                     <div class="m-widget24">
-                                        <div class="m-widget24__item">
+										<div class="m-widget24__item">
+											<a href="${value.link}"  class="top-tabs">
                                             <h4 class="m-widget24__title m--margin-top-10">
 											<i class="${value.Icon}"></i> &nbsp; ${value.title}
                                             </h4>
                                             <br>
                                             <span class="m-widget24__desc">
-											${value.Details}
+											${value.description}
                                             </span>
                                             <span class="m-widget24__stats m--font-${value.color}">
 											${value.Count}
                                             </span>
-                                            <div class="m--space-10"></div>
-                                           
-                                           
-                                           
+											<div class="m--space-10"></div>    
+											</a>                 
                                         </div>
                                     </div>
 
                                     <!--end::Total Profit-->
                                 </div>`);
 		});
+		$(".top-tabs").on('click', function (e) {
+            loadHTMLPage(e,$(this));
+        });
+      
 	}
 
 
 	var approvalDataTable = function () {
-		
 		// begin first table
 		var t = $('#m_table_1').DataTable({
 			responsive: true,
 			//== Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
-			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			<'row'<'col-sm-12 col-md-5'p><'col-sm-12 col-md-7 dataTables_pager'li>>`,
 			// read more: https://datatables.net/examples/basic_init/dom.html
 
-			lengthMenu: [5, 10, 25, 50],
-
-			pageLength: 10,
-
-
-			
-			scrollY: "300px",
-			
+			lengthMenu: [5, 10, 15, 25, 50, 55, 100 ,150],
+			pagingType: "full_numbers",
+			pageLength: 15,
+			//Fixed Height as needed
+			scrollY: "650px",
 			language: {
-				'lengthMenu': 'Display _MENU_',
+				"info": "Displaying _START_ - _END_ of _TOTAL_ records",
+				'lengthMenu': '_MENU_',
+
 			},
 			searchDelay: 500,
 			processing: !0,
@@ -90,14 +92,12 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 				data: {
 					// parameters for custom backend script demo
 					columnsDef: [
-						'RecordID', 'DateCreated', 'Owner', 'CustomerID', 'Customer', 'Approval', 'Status', 'Approver', 'Actions'
+						'DateCreated', 'Owner', 'CustomerID', 'Customer', 'Status', 'Approval', 'Approver', 'Actions'
 					],
 				},
 			},
 
-			columns: [{
-					data: 'RecordID'
-				},
+			columns: [
 				{
 					data: 'DateCreated'
 				},
@@ -110,12 +110,12 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 				{
 					data: 'Customer'
 				},
-				{
-					data: 'Approval'
-				},
 
 				{
 					data: 'Status'
+				},
+				{
+					data: 'Approval'
 				},
 				{
 					data: 'Approver'
@@ -152,10 +152,10 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 							e = $('<input type="text" class=" inline-search form-control form-control-sm form-filter m-input" data-col-index="' + this.index() + '"/>');
 							break;
 
-						case 'DateCreated':
+						case 'Date':
 							e = $('\n\t\t\t\t\t\t\t<div class="input-group date">\n\t\t\t\t\t\t\t\t<input type="text" class="inline-search form-control form-control-sm m-input" readonly placeholder="From" id="m_datepicker_1"\n\t\t\t\t\t\t\t\t data-col-index="' + this.index() + '"/>\n\t\t\t\t\t\t\t\t<div class="input-group-append">\n\t\t\t\t\t\t\t\t\t<span class="input-group-text"><i class="la la-calendar-o glyphicon-th"></i></span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="input-group date">\n\t\t\t\t\t\t\t\t<input type="text" class="form-control form-control-sm m-input" readonly placeholder="To" id="m_datepicker_2"\n\t\t\t\t\t\t\t\t data-col-index="' + this.index() + '"/>\n\t\t\t\t\t\t\t\t<div class="input-group-append">\n\t\t\t\t\t\t\t\t\t<span class="input-group-text"><i class="la la-calendar-o glyphicon-th"></i></span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>');
 							break;
-						case 'Approval Type':
+						case 'Type':
 							var approval = {
 								1: {
 									'title': 'Profit Margin',
@@ -207,51 +207,51 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 							var i = $('<button class="btn btn-brand m-btn btn-sm m-btn--icon">\n\t\t\t\t\t\t\t  <span>\n\t\t\t\t\t\t\t    <i class="la la-search"></i>\n\t\t\t\t\t\t\t    <span>Search</span>\n\t\t\t\t\t\t\t  </span>\n\t\t\t\t\t\t\t</button>'),
 								s = $('<button class="btn btn-secondary m-btn btn-sm m-btn--icon">\n\t\t\t\t\t\t\t  <span>\n\t\t\t\t\t\t\t    <i class="la la-close"></i>\n\t\t\t\t\t\t\t    <span>Reset</span>\n\t\t\t\t\t\t\t  </span>\n\t\t\t\t\t\t\t</button>');
 							$("<th>").append(i).append(s).appendTo(a), $(i).on("click", function (e) {
-								e.preventDefault();
-								var n = {};
-								$(a).find(".m-input").each(function () {
+									e.preventDefault();
+									var n = {};
+									$(a).find(".m-input").each(function () {
 
-									var t = $(this).data("col-index");
-									n[t] ? n[t] += "|" + $(this).val() : n[t] = $(this).val()
+										var t = $(this).data("col-index");
+										n[t] ? n[t] += "|" + $(this).val() : n[t] = $(this).val()
 
-									console.log('$(this).data("col-index")' + $(this).data("col-index") + n[t]);
-								}), $.each(n, function (a, e) {
-									console.log(a + e);
-									t.column(a).search(e || "", !1, !1);
-									// t.table().draw();
-								}), t.table().draw()
-							}), $(s).on("click", function (e) {
-								e.preventDefault(), $(a).find(".m-input").each(function (a) {
-									console.log('$(this).data("col-index")' + $(this).data("col-index"));
-									$(this).val(""), t.column($(this).data("col-index")).search("", !1, !1)
-								}), t.table().draw()
-							}),
-							$(".accept").on('click',function(e){
-								//TODO :: Approve Action call here
-								swal({
-									title: "Are you sure?",
-									text: "You won't be able to revert this!",
-									type: "warning",
-									showCancelButton: !0,
-									confirmButtonText: "Yes!"
-								}).then(function (e) {
-									e.value && swal("Approved!", "Request is Approved.", "success")
-								})
-							}) ,
-							$(".reject").on('click',function(e){
-								//TODO :: Approve Action call here
-								swal({
-									title: "Are you sure?",
-									text: "You won't be able to revert this!",
-									type: "warning",
-									showCancelButton: !0,
-									confirmButtonText: "Yes, reject it!",
-									cancelButtonText: "No, cancel!",
-									reverseButtons: !0
-								}).then(function (e) {
-									e.value ? swal("Rejected!", "Request is rejected.", "success") : "cancel" === e.dismiss && swal("Cancelled", "Your imaginary file is safe :)", "error")
-								})
-							}); 
+										console.log('$(this).data("col-index")' + $(this).data("col-index") + n[t]);
+									}), $.each(n, function (a, e) {
+										console.log(a + e);
+										t.column(a).search(e || "", !1, !1);
+										// t.table().draw();
+									}), t.table().draw()
+								}), $(s).on("click", function (e) {
+									e.preventDefault(), $(a).find(".m-input").each(function (a) {
+										console.log('$(this).data("col-index")' + $(this).data("col-index"));
+										$(this).val(""), t.column($(this).data("col-index")).search("", !1, !1)
+									}), t.table().draw()
+								}),
+								$(".accept").on('click', function (e) {
+									//TODO :: Approve Action call here
+									swal({
+										title: "Are you sure?",
+										text: "You won't be able to revert this!",
+										type: "warning",
+										showCancelButton: !0,
+										confirmButtonText: "Yes!"
+									}).then(function (e) {
+										e.value && swal("Approved!", "Request is Approved.", "success")
+									})
+								}),
+								$(".reject").on('click', function (e) {
+									//TODO :: Approve Action call here
+									swal({
+										title: "Are you sure?",
+										text: "You won't be able to revert this!",
+										type: "warning",
+										showCancelButton: !0,
+										confirmButtonText: "Yes, reject it!",
+										cancelButtonText: "No, cancel!",
+										reverseButtons: !0
+									}).then(function (e) {
+										e.value ? swal("Rejected!", "Request is rejected.", "success") : "cancel" === e.dismiss && swal("Cancelled", "Your imaginary file is safe :)", "error")
+									})
+								});
 
 					}
 
@@ -262,28 +262,17 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 
 			},
 
-			columnDefs: [{
-					'targets': 0,
-					'searchable': false,
-					'orderable': false,
-					'className': 'dt-body-center',
-					'render': function (data, type, full, meta) {
-						return '<input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '">';
-					}
-				},
+			columnDefs: [
 				{
 					targets: -1,
 					title: 'Actions',
 					orderable: false,
 					render: function (data, type, full, meta) {
 						return `
-						   <a href="#" class="btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill accept" aria-expanded="true" title="Accept">
+						   <a href="#" class="btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill accept" aria-expanded="true" title="Approve">
                               <i class="la la-check"></i>
                             </a>
-							<span class="btn m-btn m-btn-light m-btn--icon m-btn--icon-only m-btn--pill"  aria-expanded="true"
-							 title="Hold">
-							<i class="la la-pause"></i>
-						  </span>  
+							 
 							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill reject"
 							title="Reject">
 							<i class="la la-remove"></i>
@@ -340,9 +329,9 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 
 				// 	},
 				// },
-				
+
 				{
-					targets: 6,
+					targets: 4,
 					render: function (data, type, full, meta) {
 						var status = {
 							1: {
@@ -366,10 +355,10 @@ var DatatablesSearchOptionsAdvancedSearch = function () {
 					}
 				},
 				{
-					
-					targets: 7,
+
+					targets: 6,
 					render: function (data, type, full, meta) {
-						
+
 						return data;
 
 					}

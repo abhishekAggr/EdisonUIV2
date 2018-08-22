@@ -45,7 +45,7 @@
         "id": "6",
         "icon":"",
         "url":"approvaloverview.html",
-        "class":"",
+        "class":" m-menu__item--active ",
         "parentid": "2"
     },
     {

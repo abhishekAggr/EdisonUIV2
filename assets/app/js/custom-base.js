@@ -1,7 +1,6 @@
 $(function () {
-
     $("#m_header").load("theme/header.html");
-    $("#footer").load("theme/footer.html"); 
+    $("#footer").load("theme/footer.html");
 
     var menuSetup = function () {
 
@@ -37,6 +36,7 @@ $(function () {
             var parentid = item["parentid"];
             var id = item["id"];
             var icon = item["icon"];
+            //var liClass = item["class"];
             var url = item["url"];
 
             if (items[parentid]) {
@@ -91,7 +91,7 @@ $(function () {
                 if (this.items && this.items.length > 0) {
 
                     //var li = $("<li class='m-menu__item m-menu__item--submenu m-menu__item--active m-menu__item--open  '>" + this.label + "</li>");
-                    var li = $(`<li class="m-menu__item  m-menu__item--submenu m-menu__item--open m-menu__item--active" aria-haspopup="true" m-menu-submenu-toggle="click">
+                    var li = $(`<li class="m-menu__item  m-menu__item--submenu m-menu__item--open ${this.item['liClass']}" aria-haspopup="true" m-menu-submenu-toggle="click">
                 <a href="javascript:;" class="m-menu__link m-menu__toggle">
                     <i class="m-menu__link-icon ${this.item['icon']}"></i>
                     <span class="m-menu__link-text">${this.label}</span>
@@ -111,7 +111,7 @@ $(function () {
                     buildUL(ul, this.items);
 
                 } else {
-                    var li = $(`<li class="m-menu__item  " aria-haspopup="true">
+                    var li = $(`<li class="m-menu__item ${this.item['class']} " aria-haspopup="true">
                 <a href="${this.item['url']}" class="m-menu__link m--font-light m--font-boldest ">
                     <i class="m-menu__link-icon  ${this.item['icon']}"></i>
                     <span class="m-menu__link-title">
@@ -137,6 +137,7 @@ $(function () {
     menusSearch();
   
     $(".menu-search").on('click', function (e) {
+        alert("menu-searchW3");
         loadHTMLPage(e,$(this));
     });
  
@@ -185,7 +186,7 @@ function menusSearch() {
 function loadHTMLPage(e,obj){
 
         e.preventDefault();
-        if (obj.attr('href') != "" && (obj.attr('href') != '#')) {
+        if (obj.attr('href') != "" && (obj.attr('href') != '#') && (obj.attr('href') != 'javascript:;')) {
             $("#page").html('')
             $("#page").load(obj.attr('href'));
         }
