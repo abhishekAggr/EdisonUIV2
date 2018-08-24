@@ -3,7 +3,6 @@ $(function () {
     $("#footer").load("theme/footer.html");
 
     var menuSetup = function () {
-
         $.ajax({
             'async': true,
             'global': false,
@@ -62,6 +61,7 @@ $(function () {
 
         return source;
     }
+  
 
     var renderBreadcrumbs = function (data) {
         $("#breadcrumb").html('');
@@ -147,7 +147,7 @@ function renderPageTitle(title) {
 }
 
 function renderBreadcrumbs(data) {
-
+    $("#breadcrumb").html("");
     $.each(data, function (key, value) {
         $("#breadcrumb").append(`
         <li class="m-nav__item">
@@ -192,6 +192,15 @@ function loadHTMLPage(e,obj){
         }
         return false;
 }
+
+  /**
+     * 
+     * @param {String} id  : Element ID
+     * @param {String} value : text Value to set
+     */
+    var setValToID = function(id,htmlValue){
+        $("#"+id).text(htmlValue);
+    }
 
 
 /*
