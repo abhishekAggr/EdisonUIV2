@@ -1,0 +1,31 @@
+[{
+        "date": "07/07/2017",
+        "recordID": "1",
+        "subject": "Mendatory return ref",
+        "oldValue": "no",
+        "newValue": "yes",
+        "employee": "Bas Vervoort",
+        "status": "1",
+        "actions": null
+    },
+    {
+        "date": "07/07/2017",
+        "recordID": "2",
+        "subject": "Member of",
+        "oldValue": "Expert Group",
+        "newValue": "---",
+        "employee": "Bas Vervoort",
+        "status": "1",
+        "actions": null
+    },
+    {
+        "date": "07/07/2017",
+        "recordID": "3",
+        "subject": "Special Agreement Delivery",
+        "oldValue": "---",
+        "newValue": "Add special gift always",
+        "employee": "Bas Vervoort",
+        "status": "1",
+        "actions": null
+    }
+]

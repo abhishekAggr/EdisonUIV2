@@ -1,0 +1,41 @@
+[{
+    "PageID": 1,
+    "PageTitle": "Customer Data",
+    "customerName":"Order For FNAC Portugal",
+    "indecators":{
+        "status": {"value":"Pending","color":"brand"},
+        "customerTerms":{"value":"Contract","color":"danger"},
+        "accountType":{"value":"Special Account","color":"warning"},
+        "creditType":{"value":"KY","color":""},
+        "owner":{"value":"NLNED","color":""}
+    },
+    "BreadCrums": {
+        "0": {"title":"Administration", "link":"#","saperator":"1"},
+        "1": {"title":"Approvals", "link":"approvaloverview.html","saperator":"1"},
+        "2": {"title":"Customer Data", "link":"#","saperator":"0"}
+    },
+   
+    "buttons": {
+        "0": {
+            "class": "btn-outline-info m--margin-right-5 accept",
+            "icon": "la la-check",
+            "text": "Approve",
+            "text_class": "m--icon-font-size-sm5",
+            "modal": "#accept_modal"
+        },
+        "1": {
+            "class": "m--margin-right-5 hold",
+            "icon": "la la-exclamation-triangle",
+            "text": "Hold",
+            "text_class": "m--icon-font-size-sm5",
+            "modal": "#m_modal_5"
+        },
+        "2": {
+            "class": "btn-outline-danger m--margin-right-5 reject",
+            "icon": "la la-remove",
+            "text": "Reject",
+            "text_class": "m--icon-font-size-sm5",
+            "modal": "#m_modal_4"
+        }
+    }
+}]

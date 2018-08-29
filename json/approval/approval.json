@@ -37,7 +37,7 @@
             "color":"success",
             "Count": "2",
             "description": "All Customer Data Approvals",
-            "link":"#"
+            "link":"customerdata.html"
         }
 
     }

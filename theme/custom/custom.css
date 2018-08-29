@@ -51,3 +51,6 @@ a.top-tabs:hover {
     border-bottom: 1px solid #d9d8e8;
     color: #d9d8e8;
 }
+#indecators span.m-badge {
+    margin-left: 5px;
+}

@@ -178,7 +178,7 @@ var PortletTools = function () {
 			layout: {
 				theme: 'default', // datatable theme
 				class: '', // custom wrapper class
-				scroll: false, // enable/disable datatable scroll both horizontal and vertical when needed.
+				scroll: !1, // enable/disable datatable scroll both horizontal and vertical when needed.
 				footer: !1 // display/hide footer
 			},
 
