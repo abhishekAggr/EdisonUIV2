@@ -23,6 +23,38 @@ $(function () {
         });
     }
 
+    var ownerlist = function () {
+        $.ajax({
+            'async': true,
+            'global': false,
+            'url': 'json/owner.json',
+            'dataType': "json",
+            'success': function (data) {
+                var ownerList = "";
+
+                $.each(data, function (key, value) {
+                    $("#owner-list").append(`  <li class="m-nav__item">	<a href="#" class="m-nav__link">
+													<img src="assets/app/media/img/flags/${value.image}" class="m--img-rounded m--marginless" alt="" />
+														<span class="m-nav__link-title">
+															<span class="m-nav__link-wrap">
+																<span class="m-nav__link-text">${value.name}</span>
+																
+															</span>
+														</span>
+													</a>
+												</li>`);
+
+
+
+                });
+
+
+
+
+            }
+
+        });
+    }
 
 
     var builddata = function (data) {
@@ -61,10 +93,16 @@ $(function () {
 
         return source;
     }
-  
+
 
     var renderBreadcrumbs = function (data) {
         $("#breadcrumb").html('');
+        $("#breadcrumb").append(`<li class="m-nav__item m-nav__item--home">
+        <a href="#" class="m-nav__link m-nav__link--icon">
+            <i class="m-nav__link-icon la la-home"></i>
+        </a>
+    </li>
+    <li class="m-nav__separator">-</li>`);
         $.each(data, function (key, value) {
             $("#breadcrumb").append(`
 			<li class="m-nav__item">
@@ -128,20 +166,22 @@ $(function () {
         });
 
         $(".m-menu__link").on('click', function (e) {
-            loadHTMLPage(e,$(this));
+            loadHTMLPage(e, $(this));
         });
-      
+
     }
 
     menuSetup();
     menusSearch();
-  
+    ownerlist();
+
     $(".menu-search").on('click', function (e) {
         alert("menu-searchW3");
-        loadHTMLPage(e,$(this));
+        loadHTMLPage(e, $(this));
     });
- 
+
 });
+
 function renderPageTitle(title) {
     $("#page-title").text(title);
 }
@@ -178,29 +218,29 @@ function menusSearch() {
             empty: ['<div class="empty-message" style="padding: 10px 15px; text-align: center;">', "unable to find any, that match the current query", "</div>"].join("\n"),
             suggestion: Handlebars.compile("<div ><strong>{{value}}</strong> </div>")
         }
-        
-   
+
+
     })
 }
 
-function loadHTMLPage(e,obj){
+function loadHTMLPage(e, obj) {
 
-        e.preventDefault();
-        if (obj.attr('href') != "" && (obj.attr('href') != '#') && (obj.attr('href') != 'javascript:;')) {
-            $("#page").html('')
-            $("#page").load(obj.attr('href'));
-        }
-        return false;
+    e.preventDefault();
+    if (obj.attr('href') != "" && (obj.attr('href') != '#') && (obj.attr('href') != 'javascript:;')) {
+        $("#page").html('')
+        $("#page").load(obj.attr('href'));
+    }
+    return false;
 }
 
-  /**
-     * 
-     * @param {String} id  : Element ID
-     * @param {String} value : text Value to set
-     */
-    var setValToID = function(id,htmlValue){
-        $("#"+id).text(htmlValue);
-    }
+/**
+ * 
+ * @param {String} id  : Element ID
+ * @param {String} value : text Value to set
+ */
+var setValToID = function (id, htmlValue) {
+    $("#" + id).text(htmlValue);
+}
 
 
 /*
@@ -271,4 +311,3 @@ function renderPortler(divID, strFun, reload, collapse) {
     }
 
 }
-
