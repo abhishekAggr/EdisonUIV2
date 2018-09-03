@@ -34,14 +34,14 @@ $(function () {
 
                 $.each(data, function (key, value) {
                            $("#owner-list").append(`  <li class="m-nav__item">
-													<a href="#" class="m-nav__link"></a>
+													<a href="#" class="m-nav__link">
 													<img src="assets/app/media/img/flags/${value.image}" class="m--img-rounded m--marginless" alt="" />
-														<span class="m-nav__link-title">
+													
 															<span class="m-nav__link-wrap">
 																<span class="m-nav__link-text">${value.name}</span>
 																
 															</span>
-														</span>
+														
 													</a>
 												</li>`);
 
