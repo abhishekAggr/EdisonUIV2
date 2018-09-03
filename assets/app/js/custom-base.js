@@ -33,7 +33,8 @@ $(function () {
                 var ownerList = "";
 
                 $.each(data, function (key, value) {
-                    $("#owner-list").append(`  <li class="m-nav__item">	<a href="#" class="m-nav__link">
+                           $("#owner-list").append(`  <li class="m-nav__item">
+													<a href="#" class="m-nav__link"></a>
 													<img src="assets/app/media/img/flags/${value.image}" class="m--img-rounded m--marginless" alt="" />
 														<span class="m-nav__link-title">
 															<span class="m-nav__link-wrap">
