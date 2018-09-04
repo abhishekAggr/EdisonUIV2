@@ -1,5 +1,4 @@
 $(function () {
-    $("#m_header").load("theme/header.html");
     $("#footer").load("theme/footer.html");
 
     var menuSetup = function () {
@@ -36,11 +35,8 @@ $(function () {
                            $("#owner-list").append(`  <li class="m-nav__item">
 													<a href="#" class="m-nav__link">
 													<img src="assets/app/media/img/flags/${value.image}" class="m--img-rounded m--marginless" alt="" />
-													
-															<span class="m-nav__link-wrap">
-																<span class="m-nav__link-text">${value.name}</span>
+														<span class="m-nav__link-text m--padding-left-30">${value.name}</span>
 																
-															</span>
 														
 													</a>
 												</li>`);
@@ -177,7 +173,6 @@ $(function () {
     ownerlist();
 
     $(".menu-search").on('click', function (e) {
-        alert("menu-searchW3");
         loadHTMLPage(e, $(this));
     });
 

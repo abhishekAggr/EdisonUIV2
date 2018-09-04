@@ -57,3 +57,7 @@ a.top-tabs:hover {
 li img{
     width:16px;
 }
+.owner-icons{
+    max-height: 200px;
+    overflow-y: auto;
+}
